@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجاتنا</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<button onclick="scrollToTop()" id="scrollTopBtn" title="الرجوع للأعلى">⬆</button>
+
+<body>
+
+    <!-- الهيدر -->
+    <header id="main-header">
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="products.html">منتجاتنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- المنتجات -->
+    <section class="products">
+        <h2>منتجاتنا</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="images/product1.jpg" alt="منتج 1">
+                <h3>منتج 1</h3>
+                <p>وصف قصير للمنتج.</p>
+                <button class="order-btn">اطلب الآن</button>
+            </div>
+            <div class="product">
+                <img src="images/product2.jpg" alt="منتج 2">
+                <h3>منتج 2</h3>
+                <p>وصف قصير للمنتج.</p>
+                <button class="order-btn">اطلب الآن</button>
+            </div>
+            <div class="product">
+                <img src="images/product3.jpg" alt="منتج 3">
+                <h3>منتج 3</h3>
+                <p>وصف قصير للمنتج.</p>
+                <button class="order-btn">اطلب الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2025 جميع الحقوق محفوظة.</p>
+        <a href="https://wa.me/201017905181?text=مرحبًا، أريد طلب منتج 1" class="order-btn">اطلب الآن</a>
+
+        
+    </footer>
+
+    <!-- جافا سكريبت -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>

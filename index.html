@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر منتجات عامة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+
+    <!-- زر الرجوع للأعلى -->
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="الرجوع للأعلى">⬆</button>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="products.html">منتجاتنا</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- الهيدر -->
+    <header id="main-header">
+        <h1>أهلاً بكم في أبو راضي النفيعي</h1>
+    </header>
+
+    <!-- البانر -->
+    <section class="banner">
+        <h1>مرحبًا بكم في متجرنا!</h1>
+        <p>أفضل المنتجات بأفضل الأسعار.</p>
+        <a href="products.html" class="order-btn">تصفح المنتجات</a>
+    </section>
+
+    <!-- الحجز -->
+    <section class="booking">
+        <h2>احجز موعدك</h2>
+        <form class="booking-form">
+            <input type="text" placeholder="الاسم" required>
+            <input type="tel" placeholder="رقم الهاتف" required>
+            <input type="date" required>
+            <button type="submit">احجز الآن</button>
+        </form>
+    </section>
+
+    <!-- عرض السعر -->
+    <section class="quote">
+        <h2>طلب عرض سعر</h2>
+        <form class="quote-form">
+            <input type="text" placeholder="اسمك" required>
+            <input type="email" placeholder="البريد الإلكتروني" required>
+            <textarea placeholder="أدخل التفاصيل المطلوبة" required></textarea>
+            <button type="submit">أرسل الطلب</button>
+        </form>
+    </section>
+
+    <!-- باقات الاشتراك -->
+    <section class="plans">
+        <h2>باقات الاشتراك</h2>
+        <div class="plans-container">
+            <div class="plan">
+                <h3>الخطة الأساسية</h3>
+                <p>100 جنيه/شهر</p>
+                <ul>
+                    <li>منتجات محدودة</li>
+                    <li>دعم فني</li>
+                </ul>
+                <button class="order-btn">اشترك الآن</button>
+            </div>
+            <div class="plan">
+                <h3>الخطة المتقدمة</h3>
+                <p>250 جنيه/شهر</p>
+                <ul>
+                    <li>منتجات غير محدودة</li>
+                    <li>دعم 24/7</li>
+                </ul>
+                <button class="order-btn">اشترك الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2025 جميع الحقوق محفوظة - أبو راضي النفيعي.</p>
+        <a href="https://wa.me/201017905181?text=مرحبًا، أريد طلب منتج" class="order-btn">اطلب الآن عبر واتساب</a>
+    </footer>
+
+    <!-- جافا سكريبت -->
+    <script>
+        // زر الرجوع للأعلى
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // تأثير تغيير لون الهيدر عند التمرير
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
